@@ -1,8 +1,7 @@
 function takeANumber(lineArr, name){
-  let customerNumber = lineArr.length + 1
-  let welcomeMessage = `Welcome, ${name}. You are number ${customerNumber} in line.`
-  lineArr.push(name)
-  return welcomeMessage
+lineArr.push(name)
+let number = lineArr.length
+return `Welcome, ${name}. You are number ${number} in line.`
 }
 
 function nowServing (lineArr){
@@ -31,4 +30,19 @@ function currentLine(lineArr){
   }
   return string
 }
+
+
+//ticket wheel: establish customer count that represents every customer for the day & ticketWheel function should increase customer count by 1 in a permanent way and returns string that says "Welcome, your current number is currentCount"
+
+
+let customerCount = 0
+function ticketWheel(){
+customerCount ++
+console.log(`Welcome, your current number is ${customerCount}`)
+}
+
+ticketWheel()
+ticketWheel()
+ticketWheel()
+
 
